@@ -1,8 +1,9 @@
 # util
-Some Java useful classes.
+Some Java useful classes. 
+The latest version of the library is on the root folder.
 
 ## Contains
-* A non reentrant lock.
+* A binary semaphore.
 
 ## Authors
 * Federico Ciuffardi
