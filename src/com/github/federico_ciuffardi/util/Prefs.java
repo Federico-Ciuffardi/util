@@ -112,4 +112,10 @@ public class Prefs {
     	}
     	preferences.remove(att);
     }
+    public String getDefault(String att) {
+    	if(!defaults.containsKey(att)) {
+    		throw new IllegalArgumentException("No value or default value set for: "+ att);
+    	}
+    	return defaults.get(att);
+    }
 }
