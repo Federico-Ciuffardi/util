@@ -33,8 +33,9 @@ import java.util.prefs.Preferences;
 
 public class Prefs {
 	/* All mechanics via java.util.prefs.Preferences class */
-	Preferences preferences;
+	private Preferences preferences;
 	private Map<String,String> defaults;
+	private static Map<String,Map<String,String>> defaultsMaps = new HashMap<String,Map<String,String>>();
 	/*
      * Creates a {@code Prefs} for storing preferences
      * for to the the current user and given id
@@ -43,7 +44,13 @@ public class Prefs {
      */
 	public Prefs(String id) {
 		preferences = Preferences.userRoot().node(id);
-		defaults = new HashMap<String,String>();
+		if(!defaultsMaps.containsKey(id)) {
+			defaults = new HashMap<String,String>();
+			defaultsMaps.put(id,defaults);
+		}else {
+			defaults = defaultsMaps.get(id);
+		}
+		
 	}
 	
 	/*
