@@ -12,4 +12,4 @@ The latest version of the library is on the root folder.
 
 ## Notes
 * The documentation is in the source code
-* Thank you for reading and checking out this repository, send all your comments or questions to Federico.Ciuffardi@outlook.com.
+* Thank you for checking out this repository, send all your comments or questions to Federico.Ciuffardi@outlook.com.
